@@ -48,74 +48,17 @@ footer, header, hgroup, menu, nav, section {
 html{
     font-size:62.5%; /*62.5% means that 10px = 1 rem */
   }
-* { border: 1rem solid black; }
+
 body {
     line-height: 1;
 }
-a {
-    text-decoration: none;
-}
+
 h1, h2, h3, h4, h5 {
     font-size: 1.8;
     margin-bottom: 1.5;
     font-family: 'Rubik', sans-serif;
 }
-header {
-    width: 100%;
-    height: 7rem;
-    display: flex;
-    
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    padding: 0 3rem;
-    margin-bottom: 5rem;
-    
-}
-header, section {
-    border: 1px solid black;
-}
 
-.links {
-    display: flex;
-    justify-content: space-around;
-    width: 80%
-    
-}
-header .links a {
-    display: flex;
-    justify-content: space-around;
-    align-self: center;
-    margin-right: 1rem;
-    color: black;
-    
-}
-
-header  h1 {
-    padding-top: 1.8rem;
-    padding-left: 1rem;
-    font-weight: 1000;
-    font-size: 4rem;
-}
-
-
-
-.images {
-    display: flex;
-justify-content: center;
-margin-bottom: 5rem;
-margin-top: 10rem;
-
-}
-.image {
-    display: flex;
-    justify-content: center;
-    width: 70%;
-    height: 20%;
-}
-ol, ul {
-	list-style: none;
-}
 blockquote, q {
 	quotes: none;
 }
@@ -137,7 +80,61 @@ html, body {
     
     font-family: 'Roboto', sans-serif;
 }
+header {
+    width: 80%;
+    height: 7rem;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 0 3rem;
+    margin: 0 10% 2rem 10%;
+    
+}
+header, section {
+    border: 1px solid black;
+}
 
+.links {
+    display: flex;
+    justify-content: space-around;
+    width: 80%
+    
+}
+header .links a {
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    margin-right: 1rem;
+    color: black;
+    text-decoration: none;
+}
+
+header  h1 {
+    padding-top: 1.8rem;
+    padding-left: 1rem;
+    font-weight: 1000;
+    font-size: 4rem;
+}
+
+
+
+.images {
+    display: flex;
+justify-content: center;
+width: 80%;
+margin: 0 10% 2rem 10%;
+}
+.image {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    height: 20%;
+}
+ol, ul {
+	list-style: none;
+}
 h1, h2, h3, h4, h5 {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
@@ -146,39 +143,30 @@ h1, h2, h3, h4, h5 {
 
 p {
     line-height: 1.4;
-}
-
-.container {
-    width: 800px;
-    margin: 0 auto;
+    font-size: 1.2rem
 }
 
 .top-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+    width: 80%;
+    margin: 0 10% 2rem 10%;
+   
     border-bottom: .1rem dashed black;
-}
+} 
 
 .top-content .text-container {
     width: 48%;
     padding: 0 1%;
     padding-bottom: 2rem;  
 }
-#tc1 {
-    display: flex;
-    justify-content: center;
-}
-#tc2 {
-    display: flex;
-    justify-content: center;
-}
+
 
 .middle-content {
-    
-    margin-bottom: 2rem;
+    width: 80%;
+    padding-bottom: 20rem;
+    margin: 0 10% 2rem 10%;
     border-bottom: .1rem dashed black;
 }
 
@@ -239,22 +227,24 @@ p {
 
 .bottom-content {
     display: flex;
-    margin: 0 2% 2rem;
+    width: 80%;
+    margin: 0 10% 2rem 10%;
     justify-content: space-around;
     
 }
+.bottom-content .text-container {
+    padding: 2rem;
 
-.bottom-content .text-container1 .text-container2 .text-container3 {
-    padding-right: 4%;
-    margin-bottom: 5rem;
+}
+.bottom-content h2 {
+    padding-right: 1rem;
 }
 
 footer {
-    width: 100%;
     background: black;
     display: flex;
-    
-    margin-bottom: 2rem;
+    width: 80%;
+    margin: 0 10% 2rem 10%;
 }
 
 footer nav {
@@ -277,39 +267,95 @@ footer nav a {
 }
 
 @media (max-width: 800px) {
-    
+    div.text-container {
+        width: 80%
+    }
     header {
         flex-direction: column;
         justify-content: center
     }
+
+.middle-content .boxes {
+        
+    display: flex;
+    
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+.middle-content .boxes .box {
+    width: 30%;
+}
+p {
+    font-size: 1.4;
+}
 }
 @media (max-width: 500px) {
+    p {
+        font-size: 1.6;
+        width: 100%;
+    }
+    header a {
+        padding-bottom: 2rem;
+    }
     header {
         flex-direction: column;
-        justify-content: center
+        justify-content: center;
+        
+        margin-top: 7rem;
     }
     header .links {
         flex-direction: column;
-        justify-content: center
+        justify-content: center;
+        
     }
     
     header h1 {
         margin-top: 5rem;
     }
-    .bottom-content .text-container1 .text-container2 .text-container3 {
-       display: flex;
-       flex-direction: column;
-        padding-right: 4%;
-        margin-bottom: 5rem;
+    section.links {
+        margin-bottom: 20px;
     }
-    .middle-content .boxes {
-        
+    .image {
+        width: 80%;
+        height: 10rem;
+        margin-top: 10rem;
+    }
+    .bottom-content {
+        display: flex;
+        flex-direction: column;
+         margin-bottom: 10rem;
+     }
+     .top-content {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
+        margin: 5rem auto 0 auto;
         
+     }
+     .bottom-content .text-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        margin: 0 auto;
+     }
+     
+     .middle-content .boxes .box {
+        width: 70%;
+        height: 20rem;
+        background: black;
+        margin: 2rem 2.5%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-    .middle-content .boxes #box1 {
-   
+    .middle-content h2 {
+        text-align: center;
+    }
+    footer {
+        flex-wrap: wrap;
     }
 }
