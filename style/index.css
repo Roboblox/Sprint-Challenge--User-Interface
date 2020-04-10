@@ -92,10 +92,6 @@ header {
     margin: 0 10% 2rem 10%;
     
 }
-header, section {
-    border: 1px solid black;
-}
-
 .links {
     display: flex;
     justify-content: space-around;
@@ -355,7 +351,22 @@ p {
     .middle-content h2 {
         text-align: center;
     }
+    
     footer {
+        align-items: center;
+        justify-content: center;
+        
+    }
+    footer nav {
+        flex-direction: column;
         flex-wrap: wrap;
+        align-items: flex-start;
+        
+    }
+    footer nav a {
+        
+        padding-top: 4rem;
+        font-size: 2rem;
+        text-align: center;
     }
 }
